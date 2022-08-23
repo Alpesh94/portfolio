@@ -1,0 +1,168 @@
+@import 'links';
+:root {
+    --primary-color: #FFFFFF;
+    --secondary-color: #FF6551;
+    --text-color: #252B42;
+    --second-text-color: #737373;
+    --bg-color: #2435A1;
+    --bg-dark: #26335D;
+    --bg-color2: #F3CD03;
+    --box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07);
+}
+@import 'mixin';
+@import 'font';
+
+
+#header{
+    background-image: url('../img/header-bg.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100% 100%;
+    padding-bottom: 180px;
+    
+
+    & #nav{
+        display: flex;
+        align-items: center;
+        padding: 19px 0px 20px 0px;
+
+        & .brand_name{
+            color: var(--primary-color);
+        }
+        & #topMenu{
+            margin-left: 79px;
+
+            & ul{
+                display: flex;
+                align-items: center;
+
+                & li{
+                    margin-right: 21px;
+
+                    &:last-child{
+                        margin-right: 0px;
+                    }
+                    & .link{
+                        color: var(--primary-color);
+                        @extend .font_14;
+                        text-transform: capitalize;
+                    }
+                }
+            }
+        }
+        & .my_btn{
+            margin-left: auto;
+
+            & .btn{
+                color: var(--primary-color);
+                @extend .font_14;
+                line-height: 2.2rem;
+            }
+            & .login_btn{
+                margin-right: 45px;
+                text-transform: capitalize;
+            }
+            & .join_btn{
+                text-transform: uppercase;
+                padding: 15px 25px;
+                background-color: var(--secondary-color);
+                border-radius: 5px;
+
+                & i{
+                    margin-left: 15px;
+                }
+            }
+        }
+    }
+    & .hero_sec{
+        margin-top: 165px;
+
+        & .b_f{
+            color: var(--secondary-color);
+        }
+        & .hero_title{
+            color: var(--primary-color);
+            margin: 40px 0px;
+        }
+        & .hero_text{
+            color: var(--primary-color);
+            margin-bottom: 40px;
+        }
+        & .hero_btn {
+
+            & .btn {
+                display: inline-block;
+                padding: 15px 40px;
+                border: 1px solid var(--secondary-color);
+                margin: 0 5px;
+                border-radius: 5px;
+                background: transparent;
+                color: var(--secondary-color);
+                line-height: 2.2rem;
+                transition: .3s ease;
+            }
+            & .get_quote{
+                background: var(--secondary-color);
+                color: var(--primary-color);
+                
+
+                &:hover{
+                    background: transparent;
+                    color: var(--secondary-color);
+                }
+            }
+            & .learn_more:hover{
+                background: var(--secondary-color);
+                color: var(--primary-color)
+            }
+        }
+    }
+}
+.video_sec{
+    padding: 160px 0px 153px 0px;
+
+    & .video_box{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        & .video{
+            width: 45%;
+
+            & iframe{
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0) 14.58%, rgba(56, 56, 56, 0.84) 100%);
+                border-radius: 15px;
+            }
+        }
+        & .v_content{
+            width: 40%;
+            padding-top: 35px;
+            
+            & .v_title{
+                position: relative;
+                color: var(--text-color);
+
+                &::before{
+                    content: '';
+                    width: 98px;
+                    height: 7px;
+                    background-color: var(--secondary-color);
+                    position: absolute;
+                    left: 0;
+                    top: -35px;
+                }
+            }
+            & .v_para{
+                font-weight: 400;
+                line-height: 2rem;
+                color: var(--second-text-color);
+                margin: 35px 0px;
+            }
+            & .learn_more{
+                color: var(--secondary-color);
+            }
+        }
+    }
+}
+
